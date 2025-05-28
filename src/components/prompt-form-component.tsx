@@ -15,6 +15,8 @@ import {
 } from "@mantine/core";
 import { useStore } from "../hooks/use-store";
 import { ModelType } from "../types/OpenAi";
+import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PromptForm = observer(() => {
   const { appStore } = useStore();
@@ -152,14 +154,21 @@ export const PromptForm = observer(() => {
           onChange={(v) => appStore.setStopSequences(v)}
         />
         <Flex mt="md" gap="md">
-          <Button loading={appStore.loading} onClick={() => appStore.runAll()}>
-            Run All Combinations
+          <Button
+            loading={appStore.loading}
+            onClick={() => appStore.runAll()}
+            rightIcon={<FontAwesomeIcon icon={faMicrochip} />}
+            w="200px"
+          >
+            Generate All
           </Button>
           <Button
             loading={appStore.currentLoading}
             onClick={() => appStore.runCurrent()}
+            rightIcon={<FontAwesomeIcon icon={faMicrochip} />}
+            w="200px"
           >
-            Run with current combination
+            Generate current
           </Button>
         </Flex>
       </Stack>
