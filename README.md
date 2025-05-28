@@ -1,5 +1,7 @@
 # 🧪 Interactive Prompt Playground
 
+![image](https://github.com/user-attachments/assets/cd23408c-623f-44d7-94b2-4d6ec6222bad)
+
 An interactive playground for experimenting with OpenAI API parameters and prompt engineering. Test different combinations of parameters to see how they affect the model's output.
 
 ## Features
@@ -109,4 +111,6 @@ Changing OpenAI’s parameters like temperature, max tokens, presence penalty, a
 
 Presence penalty and frequency penalty help reduce repetition. Presence penalty stops the model from repeating the same topics or words it’s already used, encouraging fresh ideas. Frequency penalty reduces how often the same words are repeated, making the output less redundant. Together, adjusting these lets you control how creative, concise, or varied the model’s answers are, depending on what kind of result you’re looking for.
 
-## All outputs
+## All outputs - 36 combinations
+
+[prompt-results.xlsx](https://github.com/user-attachments/files/20482873/prompt-results.xlsx)

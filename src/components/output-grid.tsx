@@ -1,7 +1,15 @@
 import { observer } from "mobx-react-lite";
-import { Table, Paper, ScrollArea, useMantineTheme } from "@mantine/core";
+import {
+  Table,
+  Paper,
+  ScrollArea,
+  useMantineTheme,
+  Button,
+  Group,
+} from "@mantine/core";
 import { useStore } from "../hooks/use-store";
 import { useEffect, useRef } from "react";
+import { exportToExcel } from "../utils/excel-export";
 
 export const OutputGrid = observer(() => {
   const { appStore } = useStore();
@@ -14,6 +22,19 @@ export const OutputGrid = observer(() => {
     }
   }, []);
 
+  const handleExport = () => {
+    const data = appStore.outputs.map(({ params, output }, index) => ({
+      "#": index + 1,
+      Temperature: params.temperature,
+      "Max Tokens": params.max_tokens,
+      "Presence Penalty": params.presence_penalty,
+      "Frequency Penalty": params.frequency_penalty,
+      "Stop Sequences": params.stop?.join(", ") || "-",
+      Output: output,
+    }));
+    exportToExcel(data);
+  };
+
   return (
     <Paper
       p="md"
@@ -21,6 +42,15 @@ export const OutputGrid = observer(() => {
       h="100%"
       style={{ display: "flex", flexDirection: "column" }}
     >
+      <Group mb="md" style={{ justifyContent: "flex-end" }}>
+        <Button
+          variant="outline"
+          onClick={handleExport}
+          disabled={appStore.outputs.length === 0}
+        >
+          Download Excel
+        </Button>
+      </Group>
       <ScrollArea
         style={{ flex: 1, overflow: "auto" }}
         viewportRef={tableWrapperRef}
