@@ -160,7 +160,7 @@ export const PromptForm = observer(() => {
             rightIcon={<FontAwesomeIcon icon={faMicrochip} />}
             w={180}
           >
-            Generate All
+            Generate all
           </Button>
           <Button
             loading={appStore.currentLoading}
