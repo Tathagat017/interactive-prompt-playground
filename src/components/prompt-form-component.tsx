@@ -158,7 +158,7 @@ export const PromptForm = observer(() => {
             loading={appStore.loading}
             onClick={() => appStore.runAll()}
             rightIcon={<FontAwesomeIcon icon={faMicrochip} />}
-            w="200px"
+            w={180}
           >
             Generate All
           </Button>
@@ -166,7 +166,7 @@ export const PromptForm = observer(() => {
             loading={appStore.currentLoading}
             onClick={() => appStore.runCurrent()}
             rightIcon={<FontAwesomeIcon icon={faMicrochip} />}
-            w="200px"
+            w={180}
           >
             Generate current
           </Button>
