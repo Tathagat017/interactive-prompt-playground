@@ -105,7 +105,7 @@ npm run dev
 - Mantine UI components
 - OpenAI API
 
-## Reflection
+# Reflection
 
 Changing OpenAI’s parameters like temperature, max tokens, presence penalty, and frequency penalty has a big impact on the output. Temperature controls creativity—lower values (like 0.2) give more focused and reliable answers, while higher values (like 0.8 or 1.0) make the model more creative and unpredictable. Max tokens limits how long the response can be. A small value might cut off responses too early, while a larger one allows for more complete and detailed answers.
 
