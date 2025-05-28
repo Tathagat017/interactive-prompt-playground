@@ -55,7 +55,7 @@ An interactive playground for experimenting with OpenAI API parameters and promp
 1. Clone the repository:
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/Tathagat017/interactive-prompt-playground.git
 cd interactive-prompt-playground
 ```
 
