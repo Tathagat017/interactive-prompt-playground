@@ -1,7 +1,6 @@
 # 🧪 Interactive Prompt Playground
 
-![image](https://github.com/user-attachments/assets/72b6da14-3523-4b07-ac67-bacade5c1ba4)
-
+![image](https://github.com/user-attachments/assets/29ca6c63-379b-4fde-92a6-831ecaaec298)
 
 An interactive playground for experimenting with OpenAI API parameters and prompt engineering. Test different combinations of parameters to see how they affect the model's output.
 
